@@ -33,3 +33,14 @@ As a table relating the presence of each datapoint to that of the others:
 | Country | ? | ? | ? | ✅ | ✅ |
 | Continent | ? | ? | ? | ? | ✅ |
 
+Given we want to display the most specific possible combination of datapoints to the user, it is proposed that we use:
+
+- City, Country
+- Subdivision 2, Subdivision 1, Country
+- Subdivision 1, Country
+- Country, Continent
+- Continent
+
+In order of most to least specific.
+
+`accuracy_radius` is a value from 1 to 1000, denominated in kilometres, that tells us how confident MaxMind are. A value of 200 or more renders a particular location relatively meaningless. In that situation, propose we state "(Estimated)".
